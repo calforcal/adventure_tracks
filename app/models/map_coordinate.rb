@@ -1,0 +1,3 @@
+class MapCoordinate
+  
+end
