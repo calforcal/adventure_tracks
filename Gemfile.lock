@@ -95,6 +95,9 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    gpx (1.1.1)
+      nokogiri (~> 1.7)
+      rake
     hashdiff (1.0.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -266,9 +269,11 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  gpx
   importmap-rails
   jbuilder
   launchy
+  nokogiri
   orderly
   pg (~> 1.1)
   pry
