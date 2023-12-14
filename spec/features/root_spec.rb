@@ -18,7 +18,7 @@ RSpec.describe "root", type: :feature do
 
       it "takes you to a new page when the button is clicked" do
         click_button "Upload .gpx File"
-        expect(current_path).to eq(maps_index_path)
+        expect(current_path).to eq(maps_path)
       end
     end
   end
