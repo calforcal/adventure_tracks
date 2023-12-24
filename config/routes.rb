@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
-  resources :maps, only: %i[index]
+  resources :maps, only: %i[new create show]
 end

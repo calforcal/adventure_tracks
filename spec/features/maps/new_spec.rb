@@ -2,14 +2,20 @@ require "rails_helper"
 
 RSpec.describe "create", type: :feature do
   before(:each) do
-    visit maps_new_path
+    visit new_map_path
   end
 
   describe "create page" do
     it "exists" do
-      expect(current_path).to eq(maps_new_path)
+      expect(current_path).to eq(new_map_path)
       expect(page).to have_content("Adventure Tracks")
-      expect(page).to have_content("Click to Upload File")
+    end
+
+    it "can create a new Map object" do
+      find('form input[type="file"]').set("/Users/michaelcallahan/Downloads/test.gpx")
+      click_on "Save"
+      map = Map.last
+      expect(current_path).to eq(map_path(map))
     end
   end
 end
